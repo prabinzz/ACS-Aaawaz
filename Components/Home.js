@@ -27,7 +27,7 @@ export function Home({ navigation }) {
         </View>
         <View
           style={styles.container3}
-          onTouchEnd={() => navigation.navigate("NepaliLearning")}
+          onTouchEnd={() => navigation.navigate("NepaliAlphabate")}
         >
           <Text style={styles.text1}>Helpline</Text>
         </View>
