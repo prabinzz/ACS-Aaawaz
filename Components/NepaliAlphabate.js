@@ -4,7 +4,7 @@ import { ScrollView, StyleSheet, View, Image, Text } from "react-native";
 // data
 import { data } from "./data/nepaliKaKha";
 
-export const NepaliAlphabate = () => {
+export const NepaliAlphabate = ({ navigation }) => {
   return (
     <ScrollView>
       <Text style={{ fontSize: 40, marginTop: 10 }}>Nepali Alphabate</Text>

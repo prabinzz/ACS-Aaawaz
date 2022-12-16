@@ -15,12 +15,12 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="EnglishAlphabets" component={EnglishAlphabes} />
+        <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Learning" component={Learning} />
+        <Stack.Screen name="EnglishAlphabets" component={EnglishAlphabes} />
         <Stack.Screen name="Helpline" component={Helpline} />
         <Stack.Screen name="Interaction" component={Interaction} />
         <Stack.Screen name="NeplaiNumbers" component={NepaliNumbers} />
-        <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="NepaliAlphabate" component={NepaliAlphabate} />
       </Stack.Navigator>
     </NavigationContainer>

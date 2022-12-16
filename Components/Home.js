@@ -22,12 +22,15 @@ export function Home({ navigation }) {
         >
           <Text style={styles.text1}>Interaction</Text>
         </View>
-        <View style={styles.container2}>
+        <View
+          style={styles.container2}
+          onTouchEnd={() => navigation.navigate("Learning")}
+        >
           <Text style={styles.text1}>Learning</Text>
         </View>
         <View
           style={styles.container3}
-          onTouchEnd={() => navigation.navigate("NepaliAlphabate")}
+          onTouchEnd={() => navigation.navigate("Helpline")}
         >
           <Text style={styles.text1}>Helpline</Text>
         </View>

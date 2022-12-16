@@ -1,14 +1,17 @@
 import React from "react";
 import { StyleSheet, ScrollView, Text, View, Image } from "react-native";
 
-export default function Learning() {
+export default function Learning({ navigation }) {
   return (
     <ScrollView style={{ backgroundColor: "#e6e6fa" }}>
       <View style={styles.container}>
         <View style={styles.contain}>
           <Text style={styles.text1}>Learning</Text>
         </View>
-        <View style={styles.container2}>
+        <View
+          style={styles.container2}
+          onTouchEnd={() => navigation.navigate("EnglishAlphabets")}
+        >
           <Image
             source={require("../assets/eng.jpg")}
             style={{
@@ -22,7 +25,10 @@ export default function Learning() {
           <Text style={styles.text1}>English alphabets</Text>
         </View>
 
-        <View style={styles.container2}>
+        <View
+          style={styles.container2}
+          onTouchEnd={() => navigation.navigate("NepaliAlphabate")}
+        >
           <Image
             source={require("../assets/nep1.jpg")}
             style={{
@@ -36,7 +42,10 @@ export default function Learning() {
           <Text style={styles.text1}>Nepali Alphabets</Text>
         </View>
 
-        <View style={styles.container3}>
+        <View
+          style={styles.container3}
+          onTouchEnd={() => navigation.navigate("NeplaiNumbers")}
+        >
           <Image
             source={require("../assets/num.jpg")}
             style={{
