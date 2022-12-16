@@ -7,21 +7,28 @@ import {
   Image,
   TouchableHighlight,
 } from "react-native";
+import * as SMS from "expo-sms";
 
 export const Helpline = ({ navigation }) => {
+  const sendMessage = (number) => {
+    let message = "test";
+    // let message = `I a'm special abide person and in dier need of help. My location is Long:${} Lat:${}`
+    SMS.sendSMSAsync(number, message || "");
+  };
+
   const policeBtnPressed = () => {
     // police btn
-    alert("Police Btn");
+    sendMessage("9811343457");
   };
 
   const fireDepBtnPressed = () => {
     // fire Departemtn btn pressed
-    alert("Fire Departemnt Btn");
+    sendMessage("9803724876");
   };
 
   const ambulanceBtnPressed = () => {
     // ambulance btn pressed
-    alert("Ambulance Btn");
+    sendMessage("9817933386");
   };
 
   return (

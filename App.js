@@ -13,11 +13,11 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name="Helpline" component={Helpline} />
+        <Stack.Screen name="Interaction" component={Interaction} />
+        <Stack.Screen name="NeplaiNumbers" component={NepaliNumbers} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="NepaliAlphabate" component={NepaliAlphabate} />
-        <Stack.Screen name="NeplaiNumbers" component={NepaliNumbers} />
-        <Stack.Screen name="Interaction" component={Interaction} />
-        <Stack.Screen name="Helpline" component={Helpline} />
       </Stack.Navigator>
     </NavigationContainer>
   );
