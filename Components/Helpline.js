@@ -71,7 +71,7 @@ export const Helpline = ({ navigation }) => {
 
         <View style={styles.container1}>
           <Image
-            source={require("../assets/home.jpg")}
+            source={require("../assets/police.jpg")}
             style={{
               width: 300,
               height: 200,
@@ -82,7 +82,7 @@ export const Helpline = ({ navigation }) => {
           />
           <Text style={styles.text1}>Police</Text>
           <Text style={styles.text2}>Phone: 988401415</Text>
-          <Text style={styles.text2}>Location: location Info</Text>
+          <Text style={styles.text2}>Location: Itahari, Nepal</Text>
 
           {/* <View style = {styles.buttons} >
         <Button title ="Contact" style={styles.buttons} />
@@ -97,20 +97,12 @@ export const Helpline = ({ navigation }) => {
                 <Text style={styles.buttonText}>Contact</Text>
               </View>
             </TouchableHighlight>
-            <TouchableHighlight
-              onPress={policeBtnPressed}
-              underlayColor="white"
-            >
-              <View style={styles.button}>
-                <Text style={styles.buttonText}>Contact</Text>
-              </View>
-            </TouchableHighlight>
           </View>
         </View>
 
         <View style={styles.container2}>
           <Image
-            source={require("../assets/home.jpg")}
+            source={require("../assets/firefighter.jpg")}
             style={{
               width: 300,
               height: 200,
@@ -121,7 +113,7 @@ export const Helpline = ({ navigation }) => {
           />
           <Text style={styles.text1}>Fire Department</Text>
           <Text style={styles.text2}>Phone: 988401415</Text>
-          <Text style={styles.text2}>Location: location Info</Text>
+          <Text style={styles.text2}>Location: Kathmandu, Nepal</Text>
 
           <View style={styles.containerr}>
             <TouchableHighlight
@@ -137,7 +129,7 @@ export const Helpline = ({ navigation }) => {
 
         <View style={styles.container3}>
           <Image
-            source={require("../assets/home.jpg")}
+            source={require("../assets/ambulance.jpg")}
             style={{
               width: 300,
               height: 200,
@@ -148,7 +140,7 @@ export const Helpline = ({ navigation }) => {
           />
           <Text style={styles.text1}>Ambulance</Text>
           <Text style={styles.text2}>Phone: 988401415</Text>
-          <Text style={styles.text2}>Location: location Info</Text>
+          <Text style={styles.text2}>Location: BPKISH , Dharan</Text>
 
           <View style={styles.containerr}>
             <TouchableHighlight
@@ -184,7 +176,7 @@ const styles = StyleSheet.create({
   },
 
   text1: {
-    fontSize: 40,
+    fontSize: 30,
     fontStyle: "roboto",
     top: 25,
     marginBottom: 20,
@@ -192,7 +184,7 @@ const styles = StyleSheet.create({
   },
 
   text2: {
-    fontSize: 30,
+    fontSize: 25,
     fontStyle: "roboto",
     // top: 15,
     alignSelf: "center",

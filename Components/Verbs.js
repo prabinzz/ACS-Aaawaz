@@ -23,7 +23,7 @@ export const Verbs = ({ navigation, add }) => {
             <View
               key={item.id}
               style={{
-                backgroundColor: "#ddd",
+                backgroundColor: "#D3C1D2",
                 borderRadius: 20,
                 width: 120,
                 marginLeft: 5,

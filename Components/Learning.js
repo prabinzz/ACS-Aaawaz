@@ -6,7 +6,7 @@ export default function Learning({ navigation }) {
     <ScrollView style={{ backgroundColor: "#e6e6fa" }}>
       <View style={styles.container}>
         <View style={styles.contain}>
-          <Text style={styles.text1}>Learning</Text>
+          <Text style={{ fontSize: 40 }}>Learning</Text>
         </View>
         <View
           style={styles.container2}
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   },
 
   text1: {
-    fontSize: 40,
+    fontSize: 35,
     fontStyle: "roboto",
     top: 25,
     marginBottom: 20,

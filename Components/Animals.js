@@ -23,7 +23,7 @@ export const Animals = ({ navigation, add }) => {
             <View
               key={index}
               style={{
-                backgroundColor: "#ddd",
+                backgroundColor: "#D3C1D2",
                 borderRadius: 20,
                 width: 120,
                 marginLeft: 5,

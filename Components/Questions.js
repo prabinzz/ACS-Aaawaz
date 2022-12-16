@@ -23,7 +23,7 @@ export const Questions = ({ navigation, add }) => {
             <View
               key={index}
               style={{
-                backgroundColor: "#ddd",
+                backgroundColor: "#D3C1D2",
                 borderRadius: 20,
                 width: 120,
                 marginLeft: 5,
@@ -32,6 +32,7 @@ export const Questions = ({ navigation, add }) => {
                 height: 140,
                 padding: 10,
                 alignItems: "center",
+                borderColor: "black",
               }}
               onTouchEnd={() => {
                 add((value) => value + item.name + " ");
@@ -39,6 +40,7 @@ export const Questions = ({ navigation, add }) => {
             >
               <Text
                 style={{
+                  color: "#222",
                   fontSize: 20,
                   marginTop: 40,
                   marginLeft: 30,

@@ -46,9 +46,9 @@ export const Interaction = ({ navigation }) => {
           justifyContent: "center",
         }}
       >
-        <View style={{ width: 40, flex: 1 }}>
+        <View style={{ width: 60, flex: 1 }}>
           <Button
-            style={{ flex: 3 }}
+            style={{ flex: 3, fontSize: 40 }}
             onPress={() => {
               setValue("");
             }}
