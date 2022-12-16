@@ -14,6 +14,7 @@ import { Pronounce } from "./Pronounce";
 import { Verbs } from "./Verbs";
 
 import * as Speech from "expo-speech";
+import { Questions } from "./Questions";
 
 export const Interaction = ({ navigation }) => {
   let [value, setValue] = React.useState("");
@@ -59,6 +60,7 @@ export const Interaction = ({ navigation }) => {
         </View>
       </View>
       <ScrollView style={{ marginTop: 10 }}>
+        <Questions add={setValue} />
         <Pronounce add={setValue} />
         <Verbs add={setValue} />
         <Fruits add={setValue} />

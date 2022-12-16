@@ -1,38 +1,49 @@
 import React from "react";
 import { StyleSheet, ScrollView, Text, View, Image } from "react-native";
-import { navi } from "@react-navigation/native";
-import { Helpline } from "./Helpline";
 
 export function Home({ navigation }) {
   return (
     <ScrollView>
       <View style={styles.container}>
         <View style={styles.container0}>
-          <Text style={styles.text}>MY VOICE</Text>
           <Image
-            source={{
-              uri: "https://reactnative.dev/docs/assets/p_cat2.png",
-            }}
-            style={{ width: 200, height: 200 }}
+            source={require("../assets/home.jpg")}
+            style={{ width: 395, height: 900, right: 2 }}
           />
         </View>
+
         <View
           style={styles.container1}
           onTouchEnd={() => navigation.navigate("Interaction")}
         >
-          <Text style={styles.text1}>Interaction</Text>
+          <Image
+            source={require("../assets/Interaction.jpg")}
+            style={{ width: 450, left: 10, height: 300 }}
+          />
         </View>
         <View
           style={styles.container2}
           onTouchEnd={() => navigation.navigate("Learning")}
         >
-          <Text style={styles.text1}>Learning</Text>
+          <Image
+            source={require("../assets/learning.jpg")}
+            style={{
+              width: 450,
+              left: 10,
+              left: 29,
+              marginBottom: 10,
+              height: 300,
+            }}
+          />
         </View>
         <View
           style={styles.container3}
           onTouchEnd={() => navigation.navigate("Helpline")}
         >
-          <Text style={styles.text1}>Helpline</Text>
+          <Image
+            source={require("../assets/Helpline.jpg")}
+            style={{ width: 400, marginBottom: 20, height: 300 }}
+          />
         </View>
       </View>
     </ScrollView>
@@ -48,9 +59,9 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 16,
-    backgroundColor: "red",
+    // backgroundColor: "red",
     alignItems: "center",
-    justifyContent: "center",
+    //justifyContent: "center",
     // height: 200,
   },
 
@@ -60,22 +71,28 @@ const styles = StyleSheet.create({
   },
 
   text1: {
+    position: "absolute",
     fontSize: 40,
     fontStyle: "roboto",
+    paddingLeft: 10,
+    paddingRight: 20,
+    backgroundColor: "rgba(255, 255, 255, 1)",
+    borderRadius: 20,
+    opacity: 80,
   },
 
   container1: {
     flex: 1,
-    backgroundColor: "brown",
+    // backgroundColor: "brown",
     alignItems: "center",
     justifyContent: "center",
-    height: 300,
+    height: 250,
     width: 500,
   },
 
   container2: {
     flex: 1,
-    backgroundColor: "green",
+    // backgroundColor: '#EED6C2',
     alignItems: "center",
     justifyContent: "center",
     height: 300,
@@ -84,16 +101,16 @@ const styles = StyleSheet.create({
 
   container3: {
     flex: 1,
-    backgroundColor: "blue",
+    // backgroundColor: "blue",
     alignItems: "center",
     justifyContent: "center",
-    height: 300,
+    height: 250,
     width: 500,
   },
 
   container0: {
     flex: 3,
-    backgroundColor: "red",
+    // backgroundColor: "red",
     alignItems: "center",
     justifyContent: "center",
     height: 900,

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   StyleSheet,
   ScrollView,
@@ -8,12 +8,40 @@ import {
   TouchableHighlight,
 } from "react-native";
 import * as SMS from "expo-sms";
+import * as Location from "expo-location";
 
 export const Helpline = ({ navigation }) => {
+  const [location, setLocation] = useState(null);
+  const [errorMsg, setErrorMsg] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== "granted") {
+        setErrorMsg("Permission to access location was denied");
+        return;
+      }
+
+      let location = await Location.getCurrentPositionAsync({});
+      setLocation(location);
+    })();
+  }, []);
+
+  let text = "Waiting..";
+  if (errorMsg) {
+    text = errorMsg;
+  } else if (location) {
+    text = JSON.stringify(location);
+  }
   const sendMessage = (number) => {
-    let message = "test";
-    // let message = `I a'm special abide person and in dier need of help. My location is Long:${} Lat:${}`
-    SMS.sendSMSAsync(number, message || "");
+    let message = `I a'm special abide person and in dier need of help. `;
+    console.log(location);
+    let locationMessage =
+      location !== null
+        ? "My current loction is " +
+          `Lat: ${location.coords.latitude} Long: ${location.coords.longitude}`
+        : "";
+    SMS.sendSMSAsync(number, message + locationMessage);
   };
 
   const policeBtnPressed = () => {
@@ -56,11 +84,19 @@ export const Helpline = ({ navigation }) => {
           <Text style={styles.text2}>Phone: 988401415</Text>
           <Text style={styles.text2}>Location: location Info</Text>
 
-          {/* <View style = {styles.buttons}>
-        <Button title ="Contact" style={styles.buttons}/>
+          {/* <View style = {styles.buttons} >
+        <Button title ="Contact" style={styles.buttons} />
         </View> */}
 
           <View style={styles.containerr}>
+            <TouchableHighlight
+              onPress={policeBtnPressed}
+              underlayColor="white"
+            >
+              <View style={styles.button}>
+                <Text style={styles.buttonText}>Contact</Text>
+              </View>
+            </TouchableHighlight>
             <TouchableHighlight
               onPress={policeBtnPressed}
               underlayColor="white"
