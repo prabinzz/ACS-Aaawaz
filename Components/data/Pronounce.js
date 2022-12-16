@@ -1,21 +1,21 @@
 export const data = [
   {
-    id: 1,
+    id: "p1",
     name: "I",
     image: "",
   },
   {
-    id: 2,
+    id: "p2",
     name: "We",
     iamge: "",
   },
   {
-    id: 3,
+    id: "p3",
     name: "They",
     image: "",
   },
   {
-    id: 4,
+    id: "p4",
     name: "Us",
     image: "",
   },

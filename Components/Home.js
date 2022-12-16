@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, ScrollView, Text, View, Image } from "react-native";
 import { navi } from "@react-navigation/native";
+import { Helpline } from "./Helpline";
 
 export function Home({ navigation }) {
   return (
@@ -24,7 +25,10 @@ export function Home({ navigation }) {
         <View style={styles.container2}>
           <Text style={styles.text1}>Learning</Text>
         </View>
-        <View style={styles.container3}>
+        <View
+          style={styles.container3}
+          onTouchEnd={() => navigation.navigate("Helpline")}
+        >
           <Text style={styles.text1}>Helpline</Text>
         </View>
       </View>
