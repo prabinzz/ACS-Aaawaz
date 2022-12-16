@@ -5,12 +5,14 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Home } from "./Components/Home";
 import { Interaction } from "./Components/Interaction";
 import { Helpline } from "./Components/Helpline";
+import NepaliNumbers from "./Components/NepaliNumbers";
 
 const App = () => {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name="NeplaiNumbers" component={NepaliNumbers} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Interaction" component={Interaction} />
         <Stack.Screen name="Helpline" component={Helpline} />
