@@ -7,7 +7,7 @@ import { data } from "./data/nepaliKaKha";
 export const NepaliAlphabate = ({ navigation }) => {
   return (
     <ScrollView>
-      <Text style={{ fontSize: 40, marginTop: 10 }}>Nepali Alphabate</Text>
+      <Text style={{ fontSize: 40, marginTop: 10 }}>Nepali Alphabets</Text>
       <View style={styles.container}>
         {data.map((data, index) => {
           return (

@@ -6,7 +6,7 @@ import { data } from "./data/Verbs";
 
 export const Verbs = ({ navigation, add }) => {
   return (
-    <View style={{ marginTop: 10 }}>
+    <View style={{ paddingTop: 10 }}>
       <Text
         style={{
           marginLeft: 10,
